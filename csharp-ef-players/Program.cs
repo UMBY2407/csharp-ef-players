@@ -1,8 +1,10 @@
-﻿using csharp_ef_players;
+﻿using Microsoft.EntityFrameworkCore;
+using System.Data.SqlClient;
+using csharp_ef_players;
 using (SportContext db = new SportContext())
 {
 	//Create
-	Player newPlayer = new Player {PlayerId = 1, Name = "Alessandro", Surname = "Del Piero", NumberOfMatchesPlayed = 705, NumberOfMatchesWon = 387};
+	Player newPlayer = new Player ( 1, "Alessandro", "Del Piero", 705, 387);
 	db.Add(newPlayer);
 	db.SaveChanges();
 
