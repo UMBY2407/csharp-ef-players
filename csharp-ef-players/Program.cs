@@ -4,19 +4,23 @@ using csharp_ef_players;
 using (SportContext db = new SportContext())
 {
 	//Create
-	Player newPlayer = new Player ( 1, "Alessandro", "Del Piero", 705, 387);
+	Player newPlayer = new Player ("Alessandro", "Del Piero", 705, 387);
 	db.Add(newPlayer);
 	db.SaveChanges();
 
-	// Read
-	Console.WriteLine("Recupero lista di giocatori");
-	List<Player> players = db.Players.OrderBy(players => players.Name).ToList<Player>();
+	Console.WriteLine(newPlayer.ToString());
 
-	//Update
-	newPlayer.Name = "Gianluigi";
-	db.SaveChanges();
+	/*
+		// Read
+		Console.WriteLine("Recupero lista di giocatori");
+		List<Player> players = db.Players.OrderBy(players => players.Name).ToList<Player>();
 
-	//Delete
-	db.Remove(newPlayer);
-	db.SaveChanges();
+		//Update
+		newPlayer.Name = "Gianluigi";
+		db.SaveChanges();
+	*/
+
+		//Delete
+		db.Remove(newPlayer);
+		db.SaveChanges();
 }
