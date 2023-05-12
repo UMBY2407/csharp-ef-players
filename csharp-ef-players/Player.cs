@@ -23,12 +23,13 @@ namespace csharp_ef_players
 		public int TeamId { get; set; }
 		public Team Team { get; set; }
 
-		public Player(string Name, string Surname, int NumberOfMatchesPlayed, int NumberOfMatchesWon)
+		public Player(string Name, string Surname, int NumberOfMatchesPlayed, int NumberOfMatchesWon, int TeamId)
 		{
 			this.Name = Name;
 			this.Surname = Surname;
 			this.NumberOfMatchesPlayed = NumberOfMatchesPlayed;
 			this.NumberOfMatchesWon = NumberOfMatchesWon;
+			this.TeamId = TeamId;
 		}
 
 		public override string ToString()

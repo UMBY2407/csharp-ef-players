@@ -30,7 +30,7 @@ namespace csharp_ef_players
 		{
 			string rapprstringa = "--Squadra--\n Nome: " +
 				Name + "\n Città: " + City + "\n Allentarore: " + 
-				Coach + "\nColori: " + Colors;
+				Coach + "\n Colori: " + Colors;
 			return rapprstringa;
 		}
 	}
