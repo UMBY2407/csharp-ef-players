@@ -14,7 +14,6 @@ namespace csharp_ef_players
 	[Index(nameof(PlayerId), IsUnique = true)]
 	public class Player
 	{
-		[Key]
 		public int PlayerId { get; set; }
 		public string Name { get; set; }
 		public string Surname { get; set; }
@@ -32,7 +31,10 @@ namespace csharp_ef_players
 
 		public override string ToString()
 		{
-			string rapprStringa = "- Giocatore: " + PlayerId + ", Nome: " + Name + ", Cognome: " + Surname + ", Punteggio: " + Score + ", Partite Giocate: " + NumberOfMatchesPlayed + ", Partite Vinte: " + NumberOfMatchesWon;
+			string rapprStringa = "- Giocatore: " + PlayerId + ", Nome: " +
+				Name + ", Cognome: " + Surname + ", Punteggio: " + Score +
+				", Partite Giocate: " + NumberOfMatchesPlayed + ", Partite Vinte: " +
+				NumberOfMatchesWon;
 			return rapprStringa;
 		}
 	}

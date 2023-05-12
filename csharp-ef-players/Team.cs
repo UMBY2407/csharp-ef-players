@@ -12,9 +12,25 @@ namespace csharp_ef_players
 	public class Team
 	{
 		public int TeamId { get; set; }
-		public string? Name { get; set; }
-		public string? City { get; set; }
-		public string? Coach { get; set; }
-		public string? Colors { get; set; }
+		public string Name { get; set; }
+		public string City { get; set; }
+		public string Coach { get; set; }
+		public string Colors { get; set; }
+
+		public Team(string name, string city, string coach, string colors)
+		{
+			Name = name;
+			City = city;
+			Coach = coach;
+			Colors = colors;
+		}
+
+		public override string ToString()
+		{
+			string rapprstringa = "--Squadra--\n Nome: " +
+				Name + "\n Città: " + City + "\n Allentarore: " + 
+				Coach + "\nColori: " + Colors;
+			return rapprstringa;
+		}
 	}
 }
