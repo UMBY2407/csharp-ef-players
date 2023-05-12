@@ -16,6 +16,7 @@ namespace csharp_ef_players
 		public string City { get; set; }
 		public string Coach { get; set; }
 		public string Colors { get; set; }
+		public List<Player> Players { get; set; }
 
 		public Team(string name, string city, string coach, string colors)
 		{

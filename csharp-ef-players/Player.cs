@@ -20,6 +20,8 @@ namespace csharp_ef_players
 		public int Score { get; set; }
 		public int NumberOfMatchesPlayed { get; set; }
 		public int NumberOfMatchesWon { get; set; }
+		public int TeamId { get; set; }
+		public Team Team { get; set; }
 
 		public Player(string Name, string Surname, int NumberOfMatchesPlayed, int NumberOfMatchesWon)
 		{
