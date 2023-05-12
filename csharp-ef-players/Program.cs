@@ -5,10 +5,10 @@ using (SportContext db = new SportContext())
 {
 	//Create
 	Player newPlayer = new Player ("Alessandro", "Del Piero", 705, 387);
-	db.Add(newPlayer);
-	db.SaveChanges();
+	//db.Add(newPlayer);
+	//db.SaveChanges();
 
-	Console.WriteLine(newPlayer.ToString());
+	//Console.WriteLine(newPlayer.ToString());
 
 	/*
 		// Read
@@ -20,7 +20,8 @@ using (SportContext db = new SportContext())
 		db.SaveChanges();
 	*/
 
-		//Delete
-		db.Remove(newPlayer);
-		db.SaveChanges();
+	//Delete
+	Player loadedPlayer = db.Players.Where(m => m.PlayerId == 7).First();
+	db.Remove(loadedPlayer);
+	db.SaveChanges();
 }

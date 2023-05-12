@@ -6,10 +6,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace csharp_ef_players
 {
 	[Table("player")]
+	[Index(nameof(PlayerId), IsUnique = true)]
 	public class Player
 	{
 		[Key]

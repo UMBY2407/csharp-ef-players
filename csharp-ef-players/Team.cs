@@ -11,11 +11,10 @@ namespace csharp_ef_players
 	[Table("team")]
 	public class Team
 	{
-		[Key]
 		public int TeamId { get; set; }
-		public string Name { get; set; }
-		public string City { get; set; }
-		public string Coach { get; set; }
-		public string Colors { get; set; }
+		public string? Name { get; set; }
+		public string? City { get; set; }
+		public string? Coach { get; set; }
+		public string? Colors { get; set; }
 	}
 }
